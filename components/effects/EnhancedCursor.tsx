@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
 
 interface Particle {
-  id: number;
+  id: string;
   x: number;
   y: number;
   size: number;
@@ -18,7 +18,7 @@ interface Particle {
 }
 
 interface Trail {
-  id: number;
+  id: string;
   x: number;
   y: number;
   opacity: number;
@@ -37,13 +37,13 @@ export default function EnhancedCursor() {
 
   // Create particle
   const createParticle = useCallback((x: number, y: number, type?: string) => {
-    const colors = theme === 'dark' 
+    const colors = theme === 'dark'
       ? ['#60A5FA', '#A78BFA', '#F472B6', '#34D399', '#FBBF24', '#FB7185']
       : ['#3B82F6', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B', '#EF4444'];
-      
+
     const particleType = type || PARTICLE_TYPES[Math.floor(Math.random() * PARTICLE_TYPES.length)];
     const particle: Particle = {
-      id: Date.now() + Math.random(),
+      id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       x: x + (Math.random() - 0.5) * 30,
       y: y + (Math.random() - 0.5) * 30,
       size: Math.random() * 6 + 3,
@@ -61,7 +61,7 @@ export default function EnhancedCursor() {
   // Create trail
   const createTrail = useCallback((x: number, y: number) => {
     const trail: Trail = {
-      id: Date.now() + Math.random(),
+      id: `trail-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       x,
       y,
       opacity: 0.8,
@@ -108,7 +108,7 @@ export default function EnhancedCursor() {
 
     // Create burst of particles on click
     const burstCount = cursorMode === 'interactive' ? 8 : 5;
-    const newParticles = Array.from({ length: burstCount }, () => 
+    const newParticles = Array.from({ length: burstCount }, () =>
       createParticle(x, y, cursorMode === 'reading' ? 'star' : undefined)
     );
     setParticles(prev => [...prev, ...newParticles]);
@@ -244,9 +244,8 @@ export default function EnhancedCursor() {
 
       {/* Custom cursor */}
       <div
-        className={`absolute transition-all duration-200 ease-out ${
-          cursorMode === 'interactive' ? 'scale-150' : cursorMode === 'reading' ? 'scale-75' : 'scale-100'
-        }`}
+        className={`absolute transition-all duration-200 ease-out ${cursorMode === 'interactive' ? 'scale-150' : cursorMode === 'reading' ? 'scale-75' : 'scale-100'
+          }`}
         style={{
           left: mousePos.x - 8,
           top: mousePos.y - 8,
@@ -256,15 +255,14 @@ export default function EnhancedCursor() {
       >
         {/* Main cursor dot */}
         <div
-          className={`w-full h-full rounded-full transition-all duration-200 ${
-            isClicking ? 'scale-75' : 'scale-100'
-          }`}
+          className={`w-full h-full rounded-full transition-all duration-200 ${isClicking ? 'scale-75' : 'scale-100'
+            }`}
           style={{
             backgroundColor: cursorMode === 'interactive' ? '#10B981' : cursorMode === 'reading' ? '#F59E0B' : '#3B82F6',
             boxShadow: `0 0 20px ${cursorMode === 'interactive' ? '#10B981' : cursorMode === 'reading' ? '#F59E0B' : '#3B82F6'}`,
           }}
         />
-        
+
         {/* Outer ring */}
         <div
           className="absolute inset-0 rounded-full border-2 animate-ping"

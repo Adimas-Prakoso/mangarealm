@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface Sparkle {
-  id: number;
+  id: string;
   x: number;
   y: number;
   size: number;
@@ -16,7 +16,7 @@ interface Sparkle {
 }
 
 interface Ripple {
-  id: number;
+  id: string;
   x: number;
   y: number;
   size: number;
@@ -44,7 +44,7 @@ export default function CursorEffects() {
   // Create sparkle
   const createSparkle = useCallback((x: number, y: number) => {
     const sparkle: Sparkle = {
-      id: Date.now() + Math.random(),
+      id: `sparkle-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       x: x + (Math.random() - 0.5) * 20,
       y: y + (Math.random() - 0.5) * 20,
       size: Math.random() * 4 + 2,
@@ -61,7 +61,7 @@ export default function CursorEffects() {
   // Create ripple
   const createRipple = useCallback((x: number, y: number) => {
     const ripple: Ripple = {
-      id: Date.now() + Math.random(),
+      id: `ripple-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       x,
       y,
       size: 0,
