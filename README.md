@@ -11,7 +11,7 @@
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
   
-  [🚀 Live Demo](https://mangarealm.vercel.app) • [📖 Documentation](#-documentation) • [🐛 Report Bug](https://github.com/yourusername/mangarealm/issues) • [✨ Request Feature](https://github.com/yourusername/mangarealm/issues)
+  [🚀 Live Demo](https://mangarealm.vercel.app) • [📖 Documentation](#-documentation) • [🐛 Report Bug](https://github.com/Adimas-Prakoso/mangarealm/issues) • [✨ Request Feature](https://github.com/Adimas-Prakoso/mangarealm/issues)
   
 </div>
 
@@ -150,7 +150,7 @@ MangaRealm is a **modern, high-performance web application** for reading manga, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mangarealm.git
+git clone https://github.com/Adimas-Prakoso/mangarealm.git
 cd mangarealm
 
 # Install dependencies (using Bun - recommended)
@@ -293,7 +293,7 @@ mangarealm/
 ## 🚀 **Deployment**
 
 ### **Vercel (Recommended)**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/mangarealm)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Adimas-Prakoso/mangarealm)
 
 1. Connect your GitHub repository to Vercel
 2. Add environment variables in Vercel dashboard
@@ -349,13 +349,13 @@ mangarealm/
 We welcome contributions from the community! Here's how you can help:
 
 ### 🐛 **Bug Reports**
-- Use the [issue tracker](https://github.com/yourusername/mangarealm/issues)
+- Use the [issue tracker](https://github.com/Adimas-Prakoso/mangarealm/issues)
 - Include steps to reproduce
 - Provide browser/device information
 - Add screenshots if applicable
 
 ### ✨ **Feature Requests**
-- Check existing [feature requests](https://github.com/yourusername/mangarealm/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+- Check existing [feature requests](https://github.com/Adimas-Prakoso/mangarealm/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 - Describe the feature and use case
 - Explain why it would be valuable
 - Consider implementation complexity
@@ -478,7 +478,7 @@ Special thanks to the amazing open-source community and these fantastic projects
 <div align="center">
 
 ### 💬 **Get Help**
-[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github)](https://github.com/yourusername/mangarealm/issues)
+[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github)](https://github.com/Adimas-Prakoso/mangarealm/issues)
 [![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/mangarealm)
 [![Email](https://img.shields.io/badge/Email-Support-blue?style=for-the-badge&logo=gmail)](mailto:support@mangarealm.com)
 
